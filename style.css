@@ -84,3 +84,20 @@ li a:hover {
     text-decoration-thickness: from-font;
     text-underline-position: under;
 }
+
+.container {
+    display: flex;
+}
+
+.foot {
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0 20px 0;
+    font-family: 'rajdhani';
+    color: white;
+    font-size: 10px;
+}
+
+.foot a img {
+    padding: 0 10px 0 10px;
+}
