@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+
+/* importation des polices */
+
+@font-face {
+    font-family: 'rajdhani';
+    src: url(Police/rajdhani/Rajdhani-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'rajdhani-bold';
+    src: url(Police/rajdhani/Rajdhani-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Space Grotesk-regular';
+    src: url(Police/Space_Grotesk/static/SpaceGrotesk-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Space Grotesk-bold';
+    src: url(Police/Space_Grotesk/static/SpaceGrotesk-Bold.ttf);
+}
