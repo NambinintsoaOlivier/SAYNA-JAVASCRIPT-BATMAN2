@@ -31,5 +31,19 @@
     }
     aside {
         right: 0;
+        top: 150px;
+    }
+    .text-head {
+        width: 90%;
+    }
+    .text-head p {
+        font-size: 10px
+    }
+    .text-head h1 {
+        font-size: 20px;
+    }
+    .bouttons a {
+        font-size: 12px;
+        padding: 6px 6px 6px 6px;
     }
 }

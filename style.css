@@ -19,6 +19,11 @@
 }
 
 @font-face {
+    font-family: 'rajdhani-Medium';
+    src: url(Police/rajdhani/Rajdhani-Medium.ttf);
+}
+
+@font-face {
     font-family: 'Space Grotesk-regular';
     src: url(Police/Space_Grotesk/static/SpaceGrotesk-Regular.ttf);
 }
@@ -93,11 +98,56 @@ nav img:hover {
 /* aside */
 
 aside {
+    top: 200px;
     position: fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
     right: 50px;
+}
+
+
+/* contenu header */
+
+.grid {
+    display: grid;
+}
+
+.text-head {
+    color: rgb(199, 199, 199);
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 700PX;
+    justify-self: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.text-head p {
+    font-size: 22px;
+    font-family: 'Space Grotesk-regular';
+}
+
+.text-head h1 {
+    font-family: 'Space Grotesk-regular';
+}
+
+.bouttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.bouttons a {
+    display: flex;
+    flex-wrap: wrap;
+    color: rgb(199, 199, 199);
+    font-size: 20px;
+    letter-spacing: 2px;
+    opacity: 90%;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.5) 10%, rgb(219 5 5 / 32%) 90%);
+    padding: 15px 40px 15px 40px;
+    font-family: 'rajdhani-Medium';
 }
 
 
