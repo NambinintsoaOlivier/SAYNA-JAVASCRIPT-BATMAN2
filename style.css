@@ -51,7 +51,7 @@
 nav {
     border-bottom: 4px solid #76646162;
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     justify-content: space-between;
     align-items: center;
     padding: 50px 80px 30px 80px;
@@ -80,9 +80,13 @@ li a {
 .active,
 li a:hover {
     text-decoration: underline;
-    font-weight: bold;
+    font-family: 'rajdhani-bold';
     text-decoration-thickness: from-font;
     text-underline-position: under;
+}
+
+nav img:hover {
+    filter: invert(33%) sepia(100%) saturate(8);
 }
 
 .container {
@@ -96,6 +100,7 @@ li a:hover {
     font-family: 'rajdhani';
     color: white;
     font-size: 10px;
+    text-align: center;
 }
 
 .foot a img {

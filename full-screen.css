@@ -1,0 +1,27 @@
+@media all and (max-width: 670px) {
+    .bordure {
+        left: 30px;
+        right: 30px;
+    }
+    nav {
+        padding: 25px 10px 25px 0px;
+    }
+    nav a img {
+        width: 70px;
+    }
+    li a {
+        padding: 0px 0px 0px 15px;
+        display: block;
+        font-size: 15px;
+    }
+    .foot a img {
+        width: 15px;
+    }
+    img[alt="Logo_sayna"],
+    img[alt="icon_DC"] {
+        width: 25px!important;
+    }
+    .foot a img {
+        padding: 0 5px 0 5px;
+    }
+}
