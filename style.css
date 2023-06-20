@@ -5,6 +5,10 @@
     text-decoration: none;
 }
 
+body {
+    background-color: black;
+}
+
 
 /* importation des polices */
 
@@ -33,6 +37,11 @@
     src: url(Police/Space_Grotesk/static/SpaceGrotesk-Bold.ttf);
 }
 
+@font-face {
+    font-family: 'rajdhani-semibold';
+    src: url(Police/rajdhani/Rajdhani-SemiBold.ttf);
+}
+
 .bg-header-home {
     background-image: url(Illustrations/Bathome1.png);
     background-repeat: no-repeat;
@@ -50,7 +59,7 @@
     border: 3px solid #76646145;
     border-bottom: none;
     border-top: none;
-    height: 1000px;
+    height: auto;
 }
 
 nav {
@@ -90,7 +99,8 @@ li a:hover {
     text-underline-position: under;
 }
 
-nav img:hover {
+nav img:hover,
+aside img:hover {
     filter: invert(33%) sepia(100%) saturate(8);
 }
 
@@ -113,6 +123,11 @@ aside {
     display: grid;
 }
 
+.grid img {
+    justify-self: center;
+    width: 6%;
+}
+
 .text-head {
     color: rgb(199, 199, 199);
     display: flex;
@@ -131,23 +146,122 @@ aside {
 
 .text-head h1 {
     font-family: 'Space Grotesk-regular';
+    margin-top: 20px;
 }
 
 .bouttons {
     display: flex;
     justify-content: space-evenly;
+    margin-top: 20px;
 }
 
 .bouttons a {
     display: flex;
     flex-wrap: wrap;
-    color: rgb(199, 199, 199);
+    color: white;
     font-size: 20px;
     letter-spacing: 2px;
     opacity: 90%;
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.5) 10%, rgb(219 5 5 / 32%) 90%);
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.534) 10%, rgb(219 5 5 / 32%) 90%);
     padding: 15px 40px 15px 40px;
     font-family: 'rajdhani-Medium';
+}
+
+
+/* contenu */
+
+.bloc {
+    color: white;
+    /* background-color: blue; */
+    margin-left: 80px;
+    margin-top: 60px;
+    margin-right: 80px;
+    height: auto;
+}
+
+.bloc h1 {
+    font-family: 'rajdhani-semibold';
+    font-size: 30px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    font-synthesis: small-caps;
+}
+
+.bloc p {
+    margin-bottom: 40px;
+    width: 90%;
+    text-align: justify;
+    font-family: Space Grotesk-regular;
+    font-size: 20px;
+    color: #cfcfcf;
+}
+
+.gallery {
+    font-family: rajdhani;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    grid-gap: 54px;
+    justify-content: center;
+    height: auto;
+    flex-wrap: wrap;
+}
+
+.gallery-items {
+    height: auto;
+    display: grid;
+}
+
+.gallery-items img {
+    width: 290px;
+    transition: 0.300s;
+    height: auto;
+}
+
+.gallery-items img:hover {
+    transform: scale(110%);
+    transition: 0.300s;
+}
+
+.desc {
+    background-color: #0f0c0aed;
+    width: 108%;
+    justify-self: center;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 2px solid #323837;
+    position: relative;
+    top: -63px;
+}
+
+.desc-text {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.2) 10%, rgba(197, 0, 0, 0.2) 70%);
+    width: 80%;
+    height: auto;
+    border-radius: 30px;
+    padding: 15px;
+    position: relative;
+    right: 12px;
+    font-family: rajdhani-semiBold;
+    font-size: 12px;
+}
+
+.desc-text b {
+    color: #d9b680;
+    font-size: 8px;
+    font-family: rajdhani!important;
+    letter-spacing: 1px;
+}
+
+.form-ronde {
+    background-color: rgb(0, 0, 0);
+    width: 70px;
+    border-radius: 35px;
+    position: relative;
+    left: 12px;
+    z-index: 1;
 }
 
 
@@ -162,7 +276,7 @@ aside {
     align-items: center;
     padding: 20px 0 20px 0;
     font-family: 'rajdhani';
-    color: white;
+    color: #cfcfcf;
     font-size: 10px;
     text-align: center;
 }
