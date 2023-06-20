@@ -114,6 +114,7 @@ aside {
     flex-direction: column;
     align-items: center;
     right: 50px;
+    z-index: 1;
 }
 
 
@@ -180,8 +181,8 @@ aside {
 }
 
 .bloc h1 {
-    font-family: 'rajdhani-semibold';
-    font-size: 30px;
+    font-family: 'rajdhani-bold';
+    font-size: 32px;
     letter-spacing: 1px;
     margin-bottom: 20px;
     font-synthesis: small-caps;
@@ -193,7 +194,7 @@ aside {
     text-align: justify;
     font-family: Space Grotesk-regular;
     font-size: 20px;
-    color: #cfcfcf;
+    color: #a09f9f;
 }
 
 .gallery {
@@ -227,13 +228,14 @@ aside {
     background-color: #0f0c0aed;
     width: 108%;
     justify-self: center;
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     padding-top: 10px;
     padding-bottom: 10px;
     border: 2px solid #323837;
     position: relative;
     top: -63px;
+    display: none;
 }
 
 .desc-text {
@@ -262,6 +264,221 @@ aside {
     position: relative;
     left: 12px;
     z-index: 1;
+}
+
+.nemesis {
+    display: flex;
+    align-items: end;
+}
+
+.allies {
+    position: relative;
+    margin-right: -182px;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+}
+
+.justice {
+    position: relative;
+    margin-left: -182px;
+    margin-right: -182px;
+}
+
+.multimedia {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box {
+    display: flex;
+    border: 2px rgb(81, 120, 128);
+    background-image: linear-gradient(to right, #3e3f3a 10%, #0a1d29 70%);
+    width: 500px;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.box p {
+    font-size: 10px;
+    margin-bottom: 0;
+}
+
+.box h4 {
+    padding-bottom: 8px;
+}
+
+.box-text {
+    margin-left: 10px;
+}
+
+.video {
+    margin-bottom: 30px;
+}
+
+
+/* formualire */
+
+#formulaire {
+    color: #cfcfcf;
+    background-image: linear-gradient(to right, #48453d 0%, #0f222c 60%);
+    margin-left: -102px;
+    margin-right: -102px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid #48453d;
+    border-left: none;
+    border-right: none;
+}
+
+form {
+    width: 50%;
+}
+
+form span {
+    color: #999a98;
+    font-family: 'Space Grotesk-regular';
+}
+
+form h1 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+    font-family: rajdhani-bold;
+}
+
+#formulaire form label {
+    font-size: 20px;
+    margin-top: 30px;
+    font-family: 'rajdhani';
+    font-weight: bold;
+}
+
+#formulaire form .f-control {
+    margin-top: 30px;
+    font-size: 16px;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-width: thin;
+    border-bottom-style: outset;
+    color: #999a98;
+    font-family: 'Space Grotesk-regular';
+}
+
+#formulaire .btn {
+    padding: 15px 50px 15px 50px;
+}
+
+.f-control option {
+    background-color: #0f222c;
+}
+
+.btn {
+    border: none;
+    font-size: 20px;
+    padding: 8px;
+    transition: all 0.3s ease-out;
+    color: rgb(255, 255, 255);
+    font-family: rajdhani;
+    opacity: 80%;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.2) 10%, rgba(197, 0, 0, 0.2) 70%)
+}
+
+.btn:hover {
+    opacity: 100%;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.2) 20%, rgba(197, 0, 0, 0.2) 80%);
+}
+
+.choice {
+    display: flex;
+    margin-left: 100px;
+    margin-right: 100px;
+    justify-content: space-evenly;
+}
+
+.choice label {
+    font-size: 12px!important;
+}
+
+input[type="radio"].choix {
+    display: none;
+}
+
+input[type="radio"].choix+label:hover {
+    cursor: pointer;
+    background-color: #001520;
+}
+
+input[type="radio"].choix+label {
+    padding: 6px;
+    border: 1px solid;
+    border-image: linear-gradient(to right, #88857c 10%, #0a3855 95%);
+    border-image-slice: 1;
+    line-height: 1.5;
+    color: #fff;
+    transition: all 0.5s ease-in-out;
+}
+
+input[type="radio"].choix:checked+label {
+    background-color: #001520;
+    color: #ffffff;
+}
+
+.confirmation {
+    text-align: center;
+}
+
+.confirmation .btn {
+    background-image: linear-gradient(to right, rgb(84 84 84 / 72%) 10%, rgba(128, 1, 1, 0.83) 70%);
+}
+
+.confirmation .btn:hover {
+    cursor: pointer;
+}
+
+
+/* pre-footer */
+
+.pre-footer {
+    color: #cfcfcf;
+    display: flex;
+    justify-content: space-evenly;
+    height: 300px;
+    text-align: center;
+    align-items: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+img[alt="icon_guillemets_1"] {
+    align-self: baseline;
+    width: 90px;
+}
+
+img[alt="icon_guillemets_2"] {
+    align-self: end;
+    width: 90px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.ronde {
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 5px;
+    height: 5px;
+    border: 1.5px solid rgb(46, 102, 148);
+    border-radius: 30px;
+    margin: 2px 2px 2px 2px;
+}
+
+.color {
+    background-color: rgb(46, 102, 148);
 }
 
 
