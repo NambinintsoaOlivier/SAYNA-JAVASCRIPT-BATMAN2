@@ -13,6 +13,18 @@ body {
     display: none!important;
 }
 
+.element {
+    opacity: 0;
+    animation: 1s ease-out forwards;
+    transform: translateX(-100px);
+    transition: opacity 1s, transform 1s;
+}
+
+.element.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
 
 /* importation des polices */
 
