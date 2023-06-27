@@ -9,6 +9,10 @@ body {
     background-color: black;
 }
 
+.hide {
+    display: none!important;
+}
+
 
 /* importation des polices */
 
@@ -51,6 +55,15 @@ body {
     height: 901px;
 }
 
+.bg-header-game {
+    background-image: url(Illustrations/Batgame_1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 75% 75%;
+    width: 100%;
+    height: 901px;
+}
+
 .bordure {
     position: absolute;
     top: 0;
@@ -60,6 +73,8 @@ body {
     border-bottom: none;
     border-top: none;
     height: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 nav {
@@ -129,6 +144,7 @@ aside {
     width: 6%;
 }
 
+.text-head-game,
 .text-head {
     color: rgb(199, 199, 199);
     display: flex;
@@ -173,11 +189,10 @@ aside {
 
 .bloc {
     color: white;
-    /* background-color: blue; */
-    margin-left: 80px;
     margin-top: 60px;
-    margin-right: 80px;
     height: auto;
+    width: 90%;
+    align-self: center;
 }
 
 .bloc h1 {
@@ -209,6 +224,7 @@ aside {
 }
 
 .gallery-items {
+    position: relative;
     height: auto;
     display: grid;
 }
@@ -228,14 +244,15 @@ aside {
     background-color: #0f0c0aed;
     width: 108%;
     justify-self: center;
-    /* display: flex; */
+    display: flex;
     justify-content: center;
     padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 4px;
     border: 2px solid #323837;
     position: relative;
-    top: -63px;
-    display: none;
+    top: 380px;
+    position: absolute;
+    margin-left: -13px;
 }
 
 .desc-text {
@@ -258,7 +275,7 @@ aside {
 }
 
 .form-ronde {
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(0, 90, 192);
     width: 70px;
     border-radius: 35px;
     position: relative;
@@ -271,24 +288,36 @@ aside {
     align-items: end;
 }
 
+.nemesis img {
+    width: 200px;
+}
+
 .allies {
     position: relative;
-    margin-right: -182px;
     display: flex;
     align-items: end;
     justify-content: space-between;
+    width: 115%;
 }
 
+.allies img {
+    width: 30%;
+}
+
+#formulaire,
 .justice {
     position: relative;
-    margin-left: -182px;
-    margin-right: -182px;
+    width: 98vw;
+    margin-left: -102px;
 }
 
 .multimedia {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
+    /* width: 111%; */
+    /* margin-left: -80px; */
+    color: #cfcfcf;
+    display: flex;
+    justify-content: space-around;
 }
 
 .box {
@@ -298,6 +327,12 @@ aside {
     width: 500px;
     border-radius: 10px;
     align-items: center;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.box img {
+    height: auto;
 }
 
 .box p {
@@ -315,6 +350,8 @@ aside {
 
 .video {
     margin-bottom: 30px;
+    width: 100%;
+    height: auto;
 }
 
 
@@ -323,13 +360,12 @@ aside {
 #formulaire {
     color: #cfcfcf;
     background-image: linear-gradient(to right, #48453d 0%, #0f222c 60%);
-    margin-left: -102px;
-    margin-right: -102px;
     display: flex;
     justify-content: center;
     border: 1px solid #48453d;
     border-left: none;
     border-right: none;
+    margin-top: 20px;
 }
 
 form {
@@ -452,6 +488,15 @@ input[type="radio"].choix:checked+label {
     margin-bottom: 60px;
 }
 
+.pre-footer p {
+    font-family: 'Space Grotesk-regular';
+}
+
+.thin {
+    font-size: small;
+    color: rgb(170, 170, 170);
+}
+
 img[alt="icon_guillemets_1"] {
     align-self: baseline;
     width: 90px;
@@ -484,6 +529,10 @@ img[alt="icon_guillemets_2"] {
 
 /* footer */
 
+footer {
+    margin-top: 30px;
+}
+
 .container {
     display: flex;
 }
@@ -500,4 +549,171 @@ img[alt="icon_guillemets_2"] {
 
 .foot a img {
     padding: 0 10px 0 10px;
+}
+
+
+/* game */
+
+.text-head-game {
+    font-family: rajdhani-semibold;
+    font-size: 48px;
+    text-align: left;
+    width: 300px;
+    padding-left: 50px;
+}
+
+.bloc-game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%!important;
+}
+
+.bloc-game h1 {
+    text-align: center;
+}
+
+#restart,
+.suivante,
+.demmarer {
+    background-image: linear-gradient(to right, #614540 15%, #c7721e 95%);
+    color: #ececec;
+    padding: 20px 60px 20px 60px;
+    /* width: 200px; */
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    font-family: rajdhani;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.question-choix {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    font-family: rajdhani;
+    width: 80%;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: #c7721e;
+}
+
+.reponse li {
+    width: 100%;
+    padding: 10px;
+    background-color: #757575;
+    display: inline-block;
+}
+
+.reponse label {
+    margin-left: 20px;
+    margin-top: 20px;
+    font-family: 'Space Grotesk-regular';
+}
+
+.reponse {
+    font-size: 20px;
+}
+
+.liste-reponse {
+    width: 95%;
+}
+
+.question-choix h3 {
+    margin-bottom: 30px;
+}
+
+.question-reponse {
+    width: 540px;
+    height: 300px;
+}
+
+.list-question {
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+
+.contenu-question {
+    background-color: blueviolet;
+    height: 300px;
+    width: 750px;
+}
+
+.img-question {
+    width: 300px;
+    height: 300px;
+}
+
+.question {
+    font-size: 25px;
+    margin-bottom: 30px;
+    font-family: 'Space Grotesk-regular';
+    color: white!important;
+    text-align: left!important;
+}
+
+.container-mid {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.score-container {
+    position: fixed;
+    width: 70%;
+    height: 450px;
+    margin-top: 20px;
+    background-image: linear-gradient(to right, #917e7b 15%, #834e18 95%);
+    color: white;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+    top: 30px;
+}
+
+.blur-bg {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    margin-left: -105px;
+    height: 100%;
+    background: rgb(0, 0, 0);
+    /* backdrop-filter: blur(5px); */
+}
+
+.flow {
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+#user-score {
+    font-family: rajdhani-semibold;
+    font-size: 36px;
+    text-decoration: underline;
+}
+
+.resultat-info {
+    text-align: center;
+    font-size: 20px;
+    font-family: rajdhani;
+    margin-top: 30px;
+}
+
+.img-question img {
+    height: auto;
+    width: 100%;
+}
+
+.reponse li label {
+    cursor: pointer;
 }

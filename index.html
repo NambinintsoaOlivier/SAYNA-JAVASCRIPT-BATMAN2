@@ -8,12 +8,13 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="full-screen.css">
     <script src="script.js" defer></script>
+
     <title>Home</title>
 </head>
 
 <body>
     <!-- background du header -->
-    <div class="bg-header-home"></div>
+    <div id="head" class="bg-header-home"></div>
     <main class="bordure">
         <!-- notre navbar -->
         <nav>
@@ -27,13 +28,14 @@
         </nav>
         <!-- reseaux-socio -->
         <aside>
-            <a href=""><img src="Logos/logo_bat_fleche.png" alt="fleche1"></a><br><br>
+            <a onclick="scrollToSection('head')"><img src="Logos/logo_bat_fleche.png" alt="fleche1">
+            </a><br><br>
             <div class="reseaux-socio">
                 <a href=""><img src="Logos/icon_facebook.png" alt=""></a><br><br>
                 <a href=""><img src="Logos/icon_ig.png" alt=""></a><br><br>
                 <a href=""><img src="Logos/icon_tw.png" alt=""></a><br><br>
             </div>
-            <a href="#formulaire"><img src="Logos/logo_bat_fleche_2.png" alt="fleche2"></a>
+            <a onclick="scrollToSection('formulaire')"><img src="Logos/logo_bat_fleche_2.png" alt="fleche2"></a>
         </aside>
         <!-- text header -->
         <div class="grid">
@@ -42,56 +44,62 @@
                 </p>
                 <h1>Il est Batman</h1>
                 <div class="bouttons">
-                    <a href="">VOIR LES HEROS</a>
-                    <a href="">LES ADVERSAIRES</a>
+                    <a href="#cinema">VOIR LES HEROS</a>
+                    <a href="#nemesis">LES ADVERSAIRES</a>
                 </div>
             </div>
             <img src="Logos/fleche_down_header.png" alt="fleche_down_header">
         </div>
         <!-- batman au cinema -->
-        <section class="bloc">
+        <section id="cinema" class="bloc">
             <h1>BATMAN AU CINEMA</h1>
             <p>Le personnage de Batman est un super héros de l’univers de DC Comics. Il a été créé par le dessinateur Bob Kane et le scénariste Bill Finger et apparaît pour la première fois dans le comic book Detective Comics en 1939. Batman se différencie
                 de Superman, alors héros majeur de DC, car il n’a aucun pouvoir. Il sera porté au cinema pour la première fois en 1943 par Lewis Wilson et bénéficiera de nombreux reboot, donnant l’occasion à de multiples acteurs d’interpréter l’homme
                 chauve-souris. Voici les trois derniers :</p>
             <div class="gallery">
-                <div class="gallery-items ">
-                    <img src="Illustrations/Bathome2.png" alt="Robert Pattinson" onmouseover="mOver(this)" onmouseout="mOut(this)">
-                    <div class="desc" id="ani">
-                        <div class="form-ronde">
-                            <img src="" alt="">
-                        </div>
-                        <div class="desc-text">
-                            <div id="Robert">Robert Pattinson <br> <b>(2022)</b> </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="gallery-items" onmouseover="mOver(this)" onmouseout="mOut(this)">
-                    <img src="Illustrations/Bathome3.png" alt="Christian Bale">
-                    <div class="desc">
-                        <div class="form-ronde">
-                            <img src="" alt="">
-                        </div>
-                        <div class="desc-text">
-                            <div id="Bale">Christian Bale <br> <b>(2006 2008 2012)</b> </div>
+                <div class="gallery-items">
+                    <div onmouseover="mOver(this)" onmouseout="mOut(this)">
+                        <img src="Illustrations/Bathome2.png" alt="Robert Pattinson">
+                        <div class="desc hide">
+                            <div class="form-ronde">
+                                <img src="" alt="">
+                            </div>
+                            <div class="desc-text">
+                                <div id="Robert">Robert Pattinson <br> <b>(2022)</b> </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="gallery-items" onmouseover="mOver(this)" onmouseout="mOut(this)">
-                    <img src="Illustrations/Bathome4.png" alt="Ben Affleck">
-                    <div class="desc">
-                        <div class="form-ronde">
-                            <img src="" alt="">
+                <div class="gallery-items">
+                    <div onmouseover="mOver(this)" onmouseout="mOut(this)">
+                        <img src="Illustrations/Bathome3.png" alt="Christian Bale">
+                        <div class="desc hide">
+                            <div class="form-ronde">
+                                <img src="" alt="">
+                            </div>
+                            <div class="desc-text">
+                                <div id="Bale">Christian Bale <br> <b>(2006 2008 2012)</b> </div>
+                            </div>
                         </div>
-                        <div class="desc-text">
-                            <div id="Ben">Ben Affleck <br> <b>2016-2017/2020 2023</b> </div>
+                    </div>
+                </div>
+                <div class="gallery-items">
+                    <div onmouseover="mOver(this)" onmouseout="mOut(this)">
+                        <img src="Illustrations/Bathome4.png" alt="Ben Affleck">
+                        <div class="desc hide">
+                            <div class="form-ronde">
+                                <img src="" alt="">
+                            </div>
+                            <div class="desc-text">
+                                <div id="Ben">Ben Affleck <br> <b>2016-2017/2020 2023</b> </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
         <!-- nemesis -->
-        <section class="bloc">
+        <section id="nemesis" class="bloc">
             <div class="nemesis">
                 <h1>NEMESIS</h1>
                 <img src="Illustrations/Bathome13.png" width="150px" alt="">
@@ -102,35 +110,42 @@
             </p>
             <div class="gallery">
                 <div class="gallery-items">
-                    <img src="Illustrations/Bathome5.png" alt="The Riddler Paul Dano">
-                    <div class="desc">
-                        <div class="form-ronde">
-                            <img src="" alt="">
-                        </div>
-                        <div class="desc-text">
-                            <div id="">The Riddler Paul Dano<br> <b>(2022)</b> </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="gallery-items">
-                    <img src="Illustrations/Bathome6.png" alt="Christian Bale">
-                    <div class="desc">
-                        <div class="form-ronde">
-                            <img src="" alt="">
-                        </div>
-                        <div class="desc-text">
-                            <div id="">Le Joker Heath Ledger <br> <b>(2008)</b> </div>
+                    <div onmouseover="mOver(this)" onmouseout="mOut(this)">
+                        <img src="Illustrations/Bathome5.png" alt="The Riddler Paul Dano">
+
+                        <div class="desc hide">
+                            <div class="form-ronde">
+                                <img src="" alt="">
+                            </div>
+                            <div class="desc-text">
+                                <div id="">The Riddler Paul Dano<br> <b>(2022)</b> </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="gallery-items">
-                    <img src="Illustrations/Bathome7.png" alt="Ben Affleck">
-                    <div class="desc">
-                        <div class="form-ronde">
-                            <img src="" alt="">
+                    <div onmouseover="mOver(this)" onmouseout="mOut(this)">
+                        <img src="Illustrations/Bathome6.png" alt="Christian Bale">
+                        <div class="desc hide">
+                            <div class="form-ronde">
+                                <img src="" alt="">
+                            </div>
+                            <div class="desc-text">
+                                <div id="">Le Joker Heath Ledger <br> <b>(2008)</b> </div>
+                            </div>
                         </div>
-                        <div class="desc-text">
-                            <div id="">Darkseid Ray Porter <br> <b>(2022) </b></div>
+                    </div>
+                </div>
+                <div class="gallery-items">
+                    <div onmouseover="mOver(this)" onmouseout="mOut(this)">
+                        <img src="Illustrations/Bathome7.png" alt="Ben Affleck">
+                        <div class="desc hide">
+                            <div class="form-ronde">
+                                <img src="" alt="">
+                            </div>
+                            <div class="desc-text">
+                                <div id="">Darkseid Ray Porter <br> <b>(2022) </b></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -147,35 +162,42 @@
                 qui y règne.</p>
             <div class="gallery">
                 <div class="gallery-items">
-                    <img src="Illustrations/Bathome9.png" alt="Alfred Pennyworth Michael">
-                    <div class="desc">
-                        <div class="form-ronde">
-                            <img src="" alt="">
-                        </div>
-                        <div class="desc-text">
-                            <div>Alfred Pennyworth Michael Cain <br> <b> (2006 2008 2012)</b></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="gallery-items">
-                    <img src="Illustrations/Bathome8.png" alt="Catwoman Zoé Kravitz">
-                    <div class="desc">
-                        <div class="form-ronde">
-                            <img src="" alt="">
-                        </div>
-                        <div class="desc-text">
-                            <div>Catwoman Zoé Kravitz <br> <b>(2008)</b> </div>
+                    <div onmouseover="mOver(this)" onmouseout="mOut(this)">
+                        <img src="Illustrations/Bathome9.png" alt="Alfred Pennyworth Michael">
+                        <div class="desc hide">
+                            <div class="form-ronde">
+                                <img src="" alt="">
+                            </div>
+                            <div class="desc-text">
+                                <div>Alfred Pennyworth Michael Cain <br> <b> (2006 2008 2012)</b></div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="gallery-items">
-                    <img src="Illustrations/Bathome10.png" alt="James Gordon">
-                    <div class="desc">
-                        <div class="form-ronde">
-                            <img src="" alt="">
+                    <div onmouseover="mOver(this)" onmouseout="mOut(this)">
+                        <img src="Illustrations/Bathome8.png" alt="Catwoman Zoé Kravitz">
+                        <div class="desc hide">
+                            <div class="form-ronde">
+                                <img src="" alt="">
+                            </div>
+                            <div class="desc-text">
+                                <div>Catwoman Zoé Kravitz <br> <b>(2008)</b> </div>
+                            </div>
                         </div>
-                        <div class="desc-text">
-                            <div>James Gordon <br> <b>(2014 2019)</b> </div>
+                    </div>
+                </div>
+                <div class="gallery-items">
+                    <div onmouseover="mOver(this)" onmouseout="mOut(this)">
+
+                        <img src="Illustrations/Bathome10.png" alt="James Gordon">
+                        <div class="desc hide">
+                            <div class="form-ronde">
+                                <img src="" alt="">
+                            </div>
+                            <div class="desc-text">
+                                <div>James Gordon <br> <b>(2014 2019)</b> </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -186,36 +208,36 @@
             <h1>JUSTICE LEAGUE</h1>
             <P>Lorsque la Terre est menacée les plus grands super-héros s’allient pour la protéger. Ils doivent cependant apprendre à se faire confiance mutuellement et à faire équipe ce qui ne sera pas chose aisée. Ensemble ils forment la Justice League,
                 les plus grands superhéros de la Terre, ceux vers qui le monde entier se tourne lorsque les menaces extraterrestres ou surnaturelles menacent son existence.</P>
-            <div class="justice">
-                <img src="Illustrations/Bathome11.png" width="100%" alt="">
-            </div>
         </section>
+        <div class="justice">
+            <img src="Illustrations/Bathome11.png" width="100%" alt="">
+        </div>
         <!-- Multimedia -->
         <section class="bloc">
             <h1>MULTIMEDIA</h1>
-            <div class="multimedia">
-
-                <a href=""><img class="fleche-g-d" src="Logos/icon_fleche_1.png" alt="icon_fleche_1"></a>
-                <div class="box">
-                    <img src="Illustrations/Bathome_ba1.png" alt="Bathome_ba1">
-                    <div class="box-text">
-                        <h4>A c t i o n , A d v e n t u r e </h4>
-                        <h4 class="rajdhani">Batman Begins</h4>
-                        <h4> IMDB: <b>8.2</b></b>
-                        </h4>
-                        <p>
-                            Le jeune Bruce Wayne assiste impuissant au meurtre de ses parents. Profondément traumatisé, il grandit obnubilé par un désir de vengeance. La Ligue des ombres, une secte de guerriers ninja dirigée par Ra's al Ghul, se chargera de son entraînement. De
-                            retour chez lui à Gotham, avec l'aide de son majordome Alfred Pennyworth, Bruce Wayne se lance alors dans la lutte contre le crime sous le nom de Batman
-                        </p>
-                    </div>
-                </div>
-                <a href=""><img class="fleche-g-d" src="Logos/icon_fleche_2.png" alt="icon_fleche_2"></a>
-            </div>
         </section>
+        <div class="multimedia">
+
+            <a href=""><img class="fleche-g-d" src="Logos/icon_fleche_1.png" alt="icon_fleche_1"></a>
+            <div class="box">
+                <img src="Illustrations/Bathome_ba1.png" alt="Bathome_ba1">
+                <div class="box-text">
+                    <h4>A c t i o n , A d v e n t u r e </h4>
+                    <h4 class="rajdhani">Batman Begins</h4>
+                    <h4> IMDB: <b>8.2</b></b>
+                    </h4>
+                    <p>
+                        Le jeune Bruce Wayne assiste impuissant au meurtre de ses parents. Profondément traumatisé, il grandit obnubilé par un désir de vengeance. La Ligue des ombres, une secte de guerriers ninja dirigée par Ra's al Ghul, se chargera de son entraînement. De
+                        retour chez lui à Gotham, avec l'aide de son majordome Alfred Pennyworth, Bruce Wayne se lance alors dans la lutte contre le crime sous le nom de Batman
+                    </p>
+                </div>
+            </div>
+            <a href=""><img class="fleche-g-d" src="Logos/icon_fleche_2.png" alt="icon_fleche_2"></a>
+        </div>
         <!-- video -->
         <section class="bloc">
             <div class="video">
-                <iframe width="100%" height="455" src="https://www.youtube.com/embed/jXrFsn9pcZY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="100%" height="444" src="https://www.youtube.com/embed/jXrFsn9pcZY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
         </section>
         <!-- notre footer -->
@@ -256,7 +278,7 @@
             <img src="Logos/icon_guillemets_1.png" width="80px" height="60px" alt="icon_guillemets_1">
             <div>
                 <p class=""> La seule façon raisonnable de vivre en ce bas monde,<br> c'est en dehors des règles. <br><br>
-                    <p class=""> The Dark Knight : Le Chevalier Noir -
+                    <p class="thin"> The Dark Knight : Le Chevalier Noir -
                         <br> Le Joker à Batman (2008) </p><br>
                 </p><br>
                 <div class="center">

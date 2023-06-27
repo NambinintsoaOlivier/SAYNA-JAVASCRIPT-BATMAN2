@@ -45,5 +45,112 @@
     .bouttons a {
         font-size: 12px;
         padding: 6px 6px 6px 6px;
+        letter-spacing: 1px;
+    }
+    .bloc p {
+        font-size: 14px;
+    }
+    .gallery-items img {
+        width: 200px;
+    }
+    .desc {
+        top: 236px;
+        margin-left: -10px;
+    }
+    .nemesis img {
+        width: 74px;
+    }
+    #formulaire,
+    .justice {
+        width: 98vw;
+        margin-left: -30px;
+    }
+    .multimedia a img {
+        width: 20px;
+    }
+    .box h4 {
+        font-size: 12px;
+    }
+    .choice {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    img[alt="icon_guillemets_2"],
+    img[alt="icon_guillemets_1"] {
+        width: 35px;
+        height: 35px;
+    }
+    .video iframe {
+        height: 250px;
+    }
+    #formulaire .btn {
+        padding: 12px 20px 12px 20px;
+    }
+    form {
+        width: 75%;
+    }
+}
+
+@media all and (max-width: 487px) {
+    .box img {
+        height: 65vh;
+        width: 20vw;
+    }
+}
+
+
+/* Game */
+
+@media all and (max-width: 700px) {
+    .text-head-game {
+        font-size: 30px;
+        width: 200px;
+        padding-left: 30px;
+    }
+    #restart,
+    .suivante,
+    .demmarer {
+        padding: 10px 50px 10px 50px;
+        font-size: 18px;
+    }
+    .question-reponse p,
+    .nb-question,
+    .reponse {
+        font-size: 14px;
+    }
+    .reponse label {
+        margin-left: 10px;
+    }
+    .reponse li {
+        padding: 6px;
+    }
+    .bloc-game {
+        margin-top: 30px;
+    }
+    .blur-bg {
+        width: 101vw;
+        margin-left: -34px;
+    }
+    #user-score {
+        font-size: 14px;
+        margin-top: 30px;
+    }
+    .resultat-info {
+        font-size: 12px;
+        width: 90%;
+    }
+    #restart,
+    .suivante,
+    .demmarer {
+        font-size: 10px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 10px 16px 10px 16px;
+    }
+    .score-container {
+        height: 250px;
+    }
+    .bloc-game h1 {
+        font-size: 20px;
     }
 }

@@ -1,16 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="all">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="full-screen.css">
     <script src="script.js" defer></script>
     <title>Game</title>
 </head>
 
 <body>
+    <!-- background du header -->
+    <div class="bg-header-game"></div>
+    <main class="bordure">
+        <!-- notre navbar -->
+        <nav>
+            <a href=""><img src="Logos/logohome.png" alt="logohome"></a>
+            <div class="nav-link">
+                <ul>
+                    <li><a class="" href="index.html">HOME</a></li>
+                    <li><a class="active" href="game.html">GAME</a></li>
+                </ul>
+            </div>
+        </nav>
+        <h1 id="game" class="text-head-game">
+            LET’S PLAY A LITTLE GAME...
+        </h1>
+        <div class="grid">
+            <img src="Logos/fleche_down_header.png" alt="fleche_down_header">
+        </div>
+        <div class="bloc bloc-game demmarer-screen">
+            <h1 class="">CONNAISSEZ VOUS BIEN LE CHEVALIER NOIR?</h1>
+            <div class="question-choix">
+                <img width="100%" src="Illustrations/Batgame_2.png" alt="">
+            </div>
+            <button class="demmarer">DEMMARER LE QUIZ</button>
+        </div>
+        <!-- QUIZ -->
+        <div id="display-container">
+            <div class="bloc bloc-game">
+                <h1 class="nb-question hide">1/15</h1>
+                <div id="question" class="center list-question">
+                </div>
+            </div>
+            <div class="bloc bloc-game ">
+                <button class="suivante hide">QUESTION SUIVANTE</button>
+            </div>
+        </div>
+        <div class="bloc bloc-game">
+            <div class="score-container hide">
+                <div id="user-score">Demo Score</div>
+                <span class="resultat-info"></span>
+                <button id="restart">RECOMMENCER LE QUIZ</button>
+            </div>
+        </div>
+        <div class="blur-bg hide"></div>
+        <!-- reseaux-socio -->
+        <aside class="reseaux">
+            <a href="#game"><img src="Logos/logo_bat_fleche.png" alt="fleche1"></a><br><br>
+            <div class="reseaux-socio">
+                <a href=""><img src="Logos/icon_facebook.png" alt=""></a><br><br>
+                <a href=""><img src="Logos/icon_ig.png" alt=""></a><br><br>
+                <a href=""><img src="Logos/icon_tw.png" alt=""></a><br><br>
+            </div>
+            <a href="#quiz"><img src="Logos/logo_bat_fleche_2.png" alt="fleche2"></a>
+        </aside>
+        <!-- notre footer -->
+        <footer id="quiz">
+            <div class="container foot">
+                <img src="Logos/icon_WB.png" alt="icon_WB">
+                <p class=""> Ce projet respecte l’univers cinématographique des films Batman récents. Version Nolan & Snyder & Reeves</p>
+            </div>
+            <div class="container foot">
+                <a href=""><img src="Logos/logo_sayna_white.png" alt="Logo_sayna"></a>
+                <a href=""><img src="Logos/icon_x.png" alt="icon_x"></a>
+                <a href=""><img src="Logos/icon_DC.png" alt="icon_DC"></a>
+                <a href=""><img src="Logos/icon_facebook.png" alt="icon_Facebook"></a>
+                <a href=""><img src="Logos/icon_ig.png" alt="icon_Instagram"></a>
+                <a href=""><img src="Logos/icon_tw.png" alt="icon_Twitter"></a>
+            </div>
+        </footer>
+    </main>
 
 </body>
 
