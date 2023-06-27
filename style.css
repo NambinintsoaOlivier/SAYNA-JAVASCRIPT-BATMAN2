@@ -129,6 +129,7 @@ li a:hover {
 nav img:hover,
 aside img:hover {
     filter: invert(33%) sepia(100%) saturate(8);
+    cursor: pointer;
 }
 
 
@@ -194,6 +195,7 @@ aside {
     background-image: linear-gradient(to right, rgba(255, 255, 255, 0.534) 10%, rgb(219 5 5 / 32%) 90%);
     padding: 15px 40px 15px 40px;
     font-family: 'rajdhani-Medium';
+    cursor: pointer;
 }
 
 
