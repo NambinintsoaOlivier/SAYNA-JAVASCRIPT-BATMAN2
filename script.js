@@ -27,3 +27,13 @@ window.addEventListener('scroll', () => {
         }
     })
 })
+const imgZoom = document.querySelectorAll('.img-zoom');
+window.addEventListener('scroll', () => {
+    const triggerBottom = window.innerHeight * 0.8;
+    imgZoom.forEach(imgZoom => {
+        const elementTop = imgZoom.getBoundingClientRect().top;
+        if (elementTop < triggerBottom) {
+            imgZoom.classList.add('visible');
+        }
+    })
+})

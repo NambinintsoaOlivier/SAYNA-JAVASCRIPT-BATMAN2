@@ -14,6 +14,7 @@ let restart = document.getElementById("restart");
 let blurBg = document.querySelector(".blur-bg");
 let bordure = document.querySelector(".all");
 let reseaux = document.querySelector(".reseaux");
+
 let questionCount;
 let scoreCount = 0;
 let count = 3;
@@ -163,7 +164,7 @@ function quizCreator() {
         //image
         let img_div = document.createElement("div");
         img_div.classList.add("img-question");
-        img_div.innerHTML = `<img src="${i.img}" >`;
+        img_div.innerHTML = `<img class="ani-zoom" src="${i.img}" >`;
         div.appendChild(img_div);
         // le bloc de questions et reponse
         let questionChoix = document.createElement("div");
@@ -179,19 +180,19 @@ function quizCreator() {
         form.classList.add("liste-reponse");
         form.innerHTML = `
         <ul class="reponse">
-            <li>
+            <li id="color">
                 <input type="checkbox" class="option-div" id="a" name="" onchange="check(this)" value="${i.options[0]}">
                 <label for="a">${i.options[0]}</label>
             </li>
         </ul><br>
         <ul class="reponse">
-            <li>
+            <li id="color">
                 <input type="checkbox" class="option-div" id="b" name="" onchange="check(this)" value="${i.options[1]}">
                 <label for="b">${i.options[1]}</label>
             </li>
         </ul><br>
         <ul class="reponse">
-            <li>
+            <li id="color">
                 <input type="checkbox" class="option-div" id="c" name="" onchange="check(this)" value="${i.options[2]}">
                 <label for="c">${i.options[2]}</label>
             </li>
@@ -223,10 +224,14 @@ function check(userOption) {
     let options = question.querySelectorAll(".option-div");
     //if user clicked answer == correct option stored in object 
     if (userSolution === quizArray[questionCount].correct) {
-        userOption.classList.add("correct");
+        var color = event.target;
+        var parent = color.parentNode;
+        parent.classList.add("correct");
         scoreCount++;
     } else {
-        userOption.classList.add("incorrect");
+        var color = event.target;
+        var parent = color.parentNode;
+        parent.classList.add("incorrect");
         //For marking the correct option 
         options.forEach((element) => {
             if (element.innerText == quizArray[questionCount].correct) {

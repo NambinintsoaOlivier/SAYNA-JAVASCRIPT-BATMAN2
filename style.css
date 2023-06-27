@@ -25,6 +25,31 @@ body {
     transform: translateX(0);
 }
 
+.img-zoom {
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity 1s, transform 5s;
+}
+
+.img-zoom.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.ani-zoom {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 
 /* importation des polices */
 
@@ -616,6 +641,7 @@ input[type="checkbox"] {
     width: 20px;
     height: 20px;
     accent-color: #c7721e;
+    cursor: pointer;
 }
 
 .reponse li {
@@ -728,6 +754,10 @@ input[type="checkbox"] {
     width: 100%;
 }
 
-.reponse li label {
-    cursor: pointer;
+.correct {
+    background-color: rgb(35, 106, 29) !important;
+}
+
+.incorrect {
+    background-color: rgb(134, 0, 0)!important;
 }
