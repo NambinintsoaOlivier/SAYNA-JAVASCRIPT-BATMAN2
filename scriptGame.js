@@ -149,13 +149,13 @@ function initial() {
 }
 
 function quizCreator() {
-    //randomly sort questions 
+    //randomize type de question
     quizArray.sort(() => Math.random() - 0.5);
-    //generate quiz
+    //generer le quiz
     for (let i of quizArray) {
-        //randomly sort options 
+        //randomize type de reponse
         i.options.sort(() => Math.random() - 0.5);
-        //question number 
+        //nombre de question
         nbQuestion.innerHTML = 1 + " / " + quizArray.length;
         //contenair
         let div = document.createElement('div');
@@ -198,31 +198,25 @@ function quizCreator() {
             </li>
         </ul><br>
         `;
-
-        // if (opV == "undefined") {
-
-        // }
         questionChoix.appendChild(form);
     }
 }
 //Display quiz 
 const quizDisplay = (questionCount) => {
     let quizCards = document.querySelectorAll(".container-mid");
-    //Hide other cards 
     quizCards.forEach((card) => {
         card.classList.add("hide");
     });
-    //display current question card 
     quizCards[questionCount].classList.remove("hide");
 };
 
-//Checker Function to check if option is correct or not 
+// fonction checher pour choisir la bonne ou mauvaise reponse 
 function check(userOption) {
     let userSolution = userOption.value;
     console.log(userSolution);
     let question = document.getElementsByClassName("container-mid")[questionCount];
     let options = question.querySelectorAll(".option-div");
-    //if user clicked answer == correct option stored in object 
+    // si la reponse est correct
     if (userSolution === quizArray[questionCount].correct) {
         var color = event.target;
         var parent = color.parentNode;
@@ -232,37 +226,34 @@ function check(userOption) {
         var color = event.target;
         var parent = color.parentNode;
         parent.classList.add("incorrect");
-        //For marking the correct option 
         options.forEach((element) => {
             if (element.innerText == quizArray[questionCount].correct) {
                 element.classList.add("correct");
             }
         });
     }
-    //clear interval(stop timer) 
     clearInterval(countdown);
-    //disable all options 
     options.forEach((element) => {
         element.disabled = true;
     });
 }
 
-//Next Button 
+//button next
 suivante.addEventListener(
     "click",
     (displayNext = () => {
-        //increment questionCount 
+        //incrementation question
         questionCount += 1;
-        //if last question 
+        //si c'est la derniere question
         suivante.innerHTML = "QUESTION SUIVANTE";
         if (questionCount == quizArray.length) {
-            //hide question container and display score
+            //pour afficher le score
             displayContainer.classList.add("hide");
             scoreContainer.classList.remove("hide");
             blurBg.classList.remove("hide");
             bordure.classList.add('flow');
             reseaux.classList.add("hide");
-            //user score
+            //score d'utilisateur
             if (scoreCount >= 10 && scoreCount <= 14) {
                 userScore.innerHTML =
                     scoreCount + "/" + questionCount + " PAS MAL ! ";
@@ -287,26 +278,22 @@ suivante.addEventListener(
 
         } else if (questionCount == quizArray.length - 1) {
             suivante.innerHTML = "Voir les resultats";
-            //display questionCount 
             nbQuestion.innerHTML =
                 questionCount + 1 + " / " + quizArray.length;
-            //display quiz
-
             quizDisplay(questionCount);
             count = 16;
             clearInterval(countdown);
         } else {
-            //display questionCount 
+
             nbQuestion.innerHTML =
                 questionCount + 1 + " / " + quizArray.length;
-            //display quiz
 
             quizDisplay(questionCount);
             count = 16;
             clearInterval(countdown);
         }
     }));
-//Restart Quiz 
+//recommecer le Quiz 
 restart.addEventListener("click", () => {
     initial();
     displayContainer.classList.remove("hide");
